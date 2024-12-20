@@ -11,6 +11,8 @@ const Menu = () => (
   <p><a href="#academics">Academics</a></p>
   <p><a href="#admissions">Admissions</a></p>
   <p><a href="#contact">Contact</a></p>
+  <p><a href="#news">News</a></p>
+
   </>
 )
 
@@ -21,7 +23,6 @@ const Navbar = () => {
     <div className='babra__navbar'>
       <div className='babra__navbar-links'>
         <div className='babra__navbar-links_logo'>
-      <img src= {logo} alt="logo" />
         <h1>Babra Academy</h1>
         </div>
         <div className='babra__navbar-links_logo'>

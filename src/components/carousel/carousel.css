@@ -1,44 +1,74 @@
-.carousel-container {
+.carousel-item {
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out !important;
+  }
+  
+  .carousel-item-next,
+  .carousel-item-prev {
+    display: flex;
+  }
+  
+  .carousel-item img {
+    transition: transform 1.2s ease, opacity 1.2s ease;
+  }
+  
+  .carousel-item.active img {
+    transform: scale(1.1); /* Slight zoom-in effect */
+    opacity: 1;
+  }
+  
+  .carousel-item-next img,
+  .carousel-item-prev img {
+    transform: scale(0.9); /* Slight zoom-out effect for incoming/outgoing images */
+    opacity: 0.5;
+  }
+  .babra__carousel {
     position: relative;
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
+  }
+  
+  .carousel-item {
+    position: relative;
     overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
   
-  .carousel-slide {
-    position: relative;
-    text-align: center;
-  }
-  
-  .carousel-image {
+  .carousel-item img {
+    transition: transform 0.4s ease, opacity 0.4s ease;
     width: 100%;
     height: auto;
-    display: block;
-    border-radius: 10px;
   }
   
-  .carousel-text {
+  .carousel-item:hover img {
+    transform: scale(1.1); /* Slight zoom on hover */
+    opacity: 0.8;
+  }
+  
+  .carousel-item .hover-description {
     position: absolute;
-    bottom: 20px;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.6);
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 1.2rem;
-    animation: fadeIn 1s ease-in-out;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle, rgba(0, 47, 83, 1) 0%, rgba(4, 12, 24, 1) 100%);
+    color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    pointer-events: none; /* Prevent interactions when hidden */
   }
   
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+  .carousel-item:hover .hover-description {
+    opacity: 1;
+    transform: translate(-50%, -45%);
   }
+  
+  .hover-description h4 {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+  
+  .hover-description p {
+    margin: 0.5rem 0 0;
+    font-size: 1rem;
+  }
+  
   

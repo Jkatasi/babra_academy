@@ -17,6 +17,7 @@
     height: 50px; 
     width: auto; 
     display: block;
+   
 }
 
 /* Navbar title styling */
@@ -27,7 +28,9 @@
     margin: 0; /* Remove default margin */
     font-family:  sans-serif; /* Clean font choice */
     text-transform: uppercase; 
-    letter-spacing: 0.05rem; /* Slight spacing between letters */
+    letter-spacing: 0.05rem; 
+    position: relative;
+    align-items: center;/* Slight spacing between letters */
 }
 
 .babra__navbar-links_container {
@@ -55,7 +58,7 @@
 }
 
 .babra__navbar-links a:hover {
-    color: #3d7bd0;
+    border-bottom: 1px solid;
     transition: color 0.3s ease-in-out;
 }
 
@@ -168,4 +171,4 @@
         top: 3rem;
         right: 0;
     }
-}
+}  
